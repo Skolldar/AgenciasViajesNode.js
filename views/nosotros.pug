@@ -1,2 +1,9 @@
-h1 hola 
-p Desde pug
+//- h1 hola 
+//- p= viajes // = lo toma como variable de js y si colocas #{} es una variable tambien
+
+extends ./layout/index 
+
+block contenido 
+        p Nosotros
+
+        img(src="img/cupon.jpg")
