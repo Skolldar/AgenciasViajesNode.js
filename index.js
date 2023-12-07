@@ -2,9 +2,15 @@
 // const express = require('express');verion JS
 import express  from "express"; // version import
 import router from "./routes/index.js";
+import db from "./config/db.js";
 
 //Este contiene una funcion para ejecutar express que estara asignado al app
 const app = express();
+
+//CONECTAR DB
+db.authenticate()
+    .then(() => console.log('BASEDATOS CONNECTED')) //se ve el resultado en la terminal
+    .catch( error => console.log(error));
 
 //Definir el puerto
 const port = process.env.PORT || 4000;
