@@ -4,6 +4,9 @@ import express  from "express"; // version import
 import router from "./routes/index.js";
 import db from "./config/db.js";
 
+
+// console.log(process.env.DATABASE)// Manera de usar en ENV
+
 //Este contiene una funcion para ejecutar express que estara asignado al app
 const app = express();
 
