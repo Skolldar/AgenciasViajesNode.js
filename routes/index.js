@@ -1,5 +1,11 @@
 import express  from "express"; // version import
-import {paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales} from '../controllers/paginasControllers.js';
+import {
+    paginaInicio, 
+    paginaNosotros, 
+    paginaViajes, 
+    paginaTestimoniales,
+    paginaDetalleViaje
+} from '../controllers/paginasControllers.js';
 
 const router = express.Router();
 
@@ -9,7 +15,7 @@ router.get('/nosotros', paginaNosotros);
 
 
 router.get('/viajes', paginaViajes);
-
+router.get('/viajes/:slug', paginaDetalleViaje);
 
 router.get('/testimoniales', paginaTestimoniales);
 
